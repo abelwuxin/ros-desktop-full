@@ -10,4 +10,7 @@ RUN apt-get update && apt-get install -y \
 RUN apt-get update && apt-get install -y \
     ros-indigo-ros-tutorials \
     ros-indigo-common-tutorials \
+    ros-indigo-control-toolbox* \
+    ros-indigo-navigation* \
+    ros-indigo-csm* \
     && rm -rf /var/lib/apt/lists/
