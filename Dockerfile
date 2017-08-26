@@ -23,3 +23,7 @@ RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test \
     g++-4.9 \
     && rm -rf /var/lib/apt/lists/
     
+RUN update-alternatives --install \
+    /usr/bin/gcc gcc /usr/bin/gcc-4.9 60 \
+    --slave \
+    /usr/bin/g++ g++ /usr/bin/g++-4.9 
