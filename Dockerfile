@@ -6,3 +6,8 @@ FROM osrf/ros:indigo-desktop-trusty
 RUN apt-get update && apt-get install -y \
     ros-indigo-desktop-full=1.1.5-0* \
     && rm -rf /var/lib/apt/lists/*
+
+RUN apt-get update && apt-get install -y \
+    ros-indigo-ros-tutorials \
+    ros-indigo-common-tutorials \
+    && rm -rf /var/lib/apt/lists/
