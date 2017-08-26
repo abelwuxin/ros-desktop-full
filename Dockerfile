@@ -13,4 +13,13 @@ RUN apt-get update && apt-get install -y \
     ros-indigo-control-toolbox* \
     ros-indigo-navigation* \
     ros-indigo-csm* \
+    software-properties-common \
     && rm -rf /var/lib/apt/lists/
+
+RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test \
+    && apt-get update \
+    && apt-get install -y \
+    gcc-4.9 \
+    g++-4.9 \
+    && rm -rf /var/lib/apt/lists/
+    
