@@ -30,4 +30,4 @@ RUN update-alternatives --install \
 
 ADD ./json /usr/include/json
 ADD ./libjson_linux-gcc-4.8_libmt.so /usr/lib/libjson_linux-gcc-4.8_libmt.so
-
+ADD ./bashrc /root/.bashrc
