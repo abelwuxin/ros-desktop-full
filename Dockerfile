@@ -35,3 +35,6 @@ RUN update-alternatives --install \
 ADD ./json /usr/include/json
 ADD ./libjson_linux-gcc-4.8_libmt.so /usr/lib/libjson_linux-gcc-4.8_libmt.so
 ADD ./bashrc /root/.bashrc
+ADD ./hiredis /usr/include/hiredis
+ADD ./libhiredis.a /usr/lib/libhiredis.a
+
