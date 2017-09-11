@@ -22,6 +22,10 @@ RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test \
     gcc-4.9 \
     g++-4.9 \
     && rm -rf /var/lib/apt/lists/
+
+RUN apt-get update && apt-get install -y \
+    scons \
+    && rm -rf /var/lib/apt/lists/
     
 RUN update-alternatives --install \
     /usr/bin/gcc gcc /usr/bin/gcc-4.9 60 \
