@@ -25,12 +25,16 @@ RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test \
 
 RUN apt-get update && apt-get install -y \
     scons \
+    python-pip \
     && rm -rf /var/lib/apt/lists/
     
 RUN update-alternatives --install \
     /usr/bin/gcc gcc /usr/bin/gcc-4.9 60 \
     --slave \
     /usr/bin/g++ g++ /usr/bin/g++-4.9 
+
+RUN pip install -y \
+    redis
 
 ADD ./json /usr/include/json
 ADD ./libjson_linux-gcc-4.8_libmt.so /usr/lib/libjson_linux-gcc-4.8_libmt.so
