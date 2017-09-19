@@ -34,7 +34,8 @@ RUN update-alternatives --install \
     /usr/bin/g++ g++ /usr/bin/g++-4.9 
 
 RUN pip install \
-    redis
+    redis \
+    hiredis 
 
 ADD ./json /usr/include/json
 ADD ./libjson_linux-gcc-4.8_libmt.so /usr/lib/libjson_linux-gcc-4.8_libmt.so
