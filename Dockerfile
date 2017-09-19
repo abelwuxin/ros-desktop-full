@@ -33,7 +33,7 @@ RUN update-alternatives --install \
     --slave \
     /usr/bin/g++ g++ /usr/bin/g++-4.9 
 
-RUN pip install -y \
+RUN pip install \
     redis
 
 ADD ./json /usr/include/json
